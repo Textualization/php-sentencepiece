@@ -1,0 +1,41 @@
+{
+    "name": "textualization/sentencepiece",
+    "description": "Google SentencePiece bindings using FFI and a C adapter.",
+    "type": "library",
+    "support": {
+        "issues": "https://github.com/textualization/php-sentencepiece/issues",
+        "source": "https://github.com/textualization/php-sentencepiece"
+    },
+    "funding": [
+        {
+            "type": "ko-fi",
+            "url": "https://ko-fi.com/textualization"
+        }
+    ],
+    "require": {
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Textualization\\SentencePiece\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pablo Duboue",
+            "email": "pablo.duboue@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload-dev": {
+        "psr-4": {
+            "Textualization\\SentencePiece\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -d memory_limit=-1 tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.8"
+    }
+}
