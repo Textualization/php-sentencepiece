@@ -2,7 +2,7 @@
 
 namespace Textualization\SentencePiece;
 
-class SentencePieceProcessor implements \Countable {
+class Processor implements \Countable {
 
     private $ffi;
     private $spm;
@@ -20,7 +20,7 @@ class SentencePieceProcessor implements \Countable {
 
     public function count() : int
     {
-        return $this->ffi->spm_spm_get_piece_size($this->spm);
+        return $this->ffi->spm_get_piece_size($this->spm);
     }
 
     public function Encode(string $text, int $max_tokens) : array

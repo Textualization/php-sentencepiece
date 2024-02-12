@@ -2,7 +2,7 @@
 
 namespace Textualization\SentencePiece\Tests;
 
-use Textualization\SentencePiece\SentencePieceProcessor;
+use Textualization\SentencePiece\Processor;
 use Textualization\SentencePiece\Vendor;
 
 use PHPUnit\Framework\TestCase;
@@ -18,7 +18,7 @@ class SimpleTest extends TestCase {
 
     public function test_load() : void
     {
-        $spm = new \Textualization\SentencePiece\SentencePieceProcessor();
+        $spm = new Processor();
         $this->assertNotNull($spm);
     }
 }
