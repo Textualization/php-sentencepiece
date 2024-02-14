@@ -1,9 +1,17 @@
+sentencepiece (0.0.3)
+
+	* Bugfixing
+
+-- Pablo Duboue, 2024/02/14
+
+
 sentencepiece (0.0.2)
 
 	* Simplified naming
 	* Bugfixing
 
 -- Pablo Duboue, 2024/02/12
+
 
 sentencepiece (0.0.1)
 

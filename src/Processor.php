@@ -29,8 +29,10 @@ class Processor implements \Countable {
         $buffer = \FFI::new($buffer_type);
         $actual = $this->ffi->spm_encode($this->spm, $text, $buffer, $max_tokens);
         $result=[];
-        for($i=0; $i<$actual; $i++) {
-            $result[] = $buffer[$i];
+        if($actual > 0) {
+            for($i=0; $i<$actual && $i<$max_tokens; $i++) {
+                $result[] = $buffer[$i];
+            }
         }
         return $result; //array_slice($buffer, 0, $actual);
     }
