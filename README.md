@@ -13,7 +13,15 @@ A binary for the library can be downloaded by doing:
 composer exec -- php -r "require 'vendor/autoload.php'; Textualization\SentencePiece\Vendor::check();"
 ```
 
-but depending on platform and GLIBC you might need to compile it yourself and copy to `vendor/textualization/sentencepiece/lib` (create the folder if it doesn't exist). See `src/Vendor.php` for details.
+See [src/Vendor.php](src/Vendor.php) for details.
+
+You can check if it's usable with:
+
+```bash
+ldd vendor/textualization/sentencepiece/lib/libsentencepiece.so.0.1.99
+```
+
+If it's not (depending on platform and GLIBC) you will need to compile it yourself from [https://github.com/textualization/sentencepiece/] and copy to `vendor/textualization/sentencepiece/lib` (create the folder if it doesn't exist).
 
 ## Running the tests
 
